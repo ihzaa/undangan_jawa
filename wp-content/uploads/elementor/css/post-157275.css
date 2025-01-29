@@ -945,6 +945,6 @@ from { transform: rotate(2deg) scale(1); }
 	font-style: normal;
 	font-weight: normal;
 	font-display: auto;
-	src: url('/https://cdn.jsdelivr.net/gh/ihzaa/undangan_jawa@a0add741b9a1b86a4455c6babc14181fd3af416f/fonts/font@files/Hatolie.woff2') format('woff2');
+	src: url('https://cdn.jsdelivr.net/gh/ihzaa/undangan_jawa@a0add741b9a1b86a4455c6babc14181fd3af416f/fonts/font@files/Hatolie.woff2') format('woff2');
 }
 /* End Custom Fonts CSS */

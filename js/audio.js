@@ -18,7 +18,7 @@ jQuery(document).ready(function (a) {
             t.pause()
         }
         else {
-            if (a("#mute-sound").is(":visible")) {
+            if (a("#mute-sound").is(":visible") && $("#btn_buka_undangan").length < 1) {
                 t.play()
             }
         }

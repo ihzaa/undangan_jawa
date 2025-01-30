@@ -141,7 +141,7 @@
                                                    data-widget_type="nama-tamu.default">
                                                    <div class="elementor-widget-container">
                                                       <div class="dear">Kepada Yth.<br>Bpk/Ibu/Saudara/i</div>
-                                                      <div class="nmt" style="margin:7px 0">Nama Tamu</div>
+                                                      <div class="nmt nama_tamu" style="margin:7px 0" >Nama Tamu</div>
                                                       <div class="dear notes">di Tempat</div>
                                                    </div>
                                                 </div>
@@ -151,7 +151,7 @@
                                                    data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}"
                                                    data-widget_type="button.default">
                                                    <div class="elementor-widget-container">
-                                                      <div class="elementor-button-wrapper"> <a
+                                                      <div class="elementor-button-wrapper"> <a id="btn_buka_undangan"
                                                             class="elementor-button elementor-size-sm elementor-animation-grow"
                                                             role="button"> <span
                                                                class="elementor-button-content-wrapper"> <span
@@ -1626,17 +1626,21 @@
                                           data-widget_type="wishes.default">
                                           <div class="elementor-widget-container">
                                              <div class="wishes-kit">
-                                                <form id="wishes-form">
-                                                   <div class="form-group"> <input class="form-control author-name"
-                                                         name="name" value="" placeholder="Nama Kamu" required> <span
-                                                         class="error-info-name"></span></div>
-                                                   <div class="form-group"><textarea class="form-control" rows="5"
-                                                         name="wishes" placeholder="Berikan Ucapan &amp; Do&#039;a"
-                                                         required></textarea><span class="error-info-wishes"></span>
+                                                <form id="form_ucapan">
+                                                   <div class="form-group"> 
+                                                      <input class="form-control author-name"
+                                                         name="form_ucapan_nama" value="" placeholder="Nama Kamu" required>
+                                                         <span class="error-info-name"></span>
+                                                      </div>
+                                                   <div class="form-group">
+                                                      <textarea class="form-control" rows="5"
+                                                         name="form_ucapan_ucapan" placeholder="Berikan Ucapan &amp; Do&#039;a"
+                                                         required></textarea>
+                                                         <span class="error-info-wishes"></span>
                                                    </div>
                                                    <div class="label-wish-form">Konfirmasi Kehadiran ?</div>
                                                    <div class="form-group">
-                                                      <input type="radio" name="attendance" value="Hadir" id="attend"
+                                                      <input type="radio" name="form_ucapan_kehadiran" value="1" id="attend"
                                                          required />
                                                       <label for="attend" class="attend">
                                                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
@@ -1649,7 +1653,7 @@
                                                          </svg>
                                                          Hadir
                                                       </label>
-                                                      <input type="radio" name="attendance" value="Tidak Hadir"
+                                                      <input type="radio" name="form_ucapan_kehadiran" value="0"
                                                          id="no-attend" />
                                                       <label for="no-attend" class="attend">
                                                          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15"
@@ -1664,20 +1668,13 @@
                                                       </label>
                                                    </div>
                                                    <div class="form-group" id="number-attend">
-                                                      <div class="form-group-prepend">
-                                                         <label>Jumlah Tamu</label>
-                                                         <select type="number" name="numb-attendence">
-                                                            <option disabled>~</option>
-                                                            <option value='1'>1 Tamu</option>
-                                                            <option value='2'>2 Tamu</option>
-                                                            <option value='3'>3 Tamu</option>
-                                                         </select>
-                                                      </div>
                                                    </div>
                                                    <button type="submit" id="submit">Send</button>
                                                 </form>
                                                 <div class="wish-alert"></div>
-                                                <div class="wishes-box"></div>
+                                                <div class="wishes-box" id="wishes-box">
+                                                                                                      
+                                                </div>
                                                 <div class="pagenumb"></div>
                                              </div>
                                           </div>
@@ -2281,7 +2278,7 @@
                                                          <div style="text-align: left;margin-left: 20px;"> <span
                                                                style="font-size:13px">Kepada
                                                                Yth:<br>Bpk/Ibu/Saudara/i</span>
-                                                            <p style="padding:5px 0; font-size: 15px;font-weight: 500;">
+                                                            <p class="nama_tamu" style="padding:5px 0; font-size: 15px;font-weight: 500;">
                                                                Nama Tamu</p> <span style="font-size:13px">di
                                                                Tempat</span>
                                                          </div>
@@ -2298,8 +2295,7 @@
                                                             <strong>untukmu.online</strong>
                                                          </p>
                                                       </div>
-                                                   </div> <a id="download-qr" data-text="Nama Tamu">DOWNLOAD
-                                                      E-INVITATION</a>
+                                                   </div>
                                                    <div id="loadImgx" style="text-align: center;margin: 14px 0;"></div>
                                                 </div>
                                              </div>
@@ -2593,9 +2589,18 @@
                      <script src="http://localhost/undangan_jawa/js/2.js"></script>
                      <script defer src="http://localhost/undangan_jawa/js/index.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.5/js/lightbox.min.js" integrity="sha512-KbRFbjA5bwNan6DvPl1ODUolvTTZ/vckssnFhka5cG80JVa5zSlRPCr055xSgU/q6oMIGhZWLhcbgIC0fyw3RQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-      <!-- <script defer src="http://localhost/undangan_jawa/js/audio.js"></script> -->
-       <script src="http://localhost/undangan_jawa/js/audio.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.2.9/purify.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  
+       <script defer src="http://localhost/undangan_jawa/js/audio.js"></script>
+       <script src="https://cdn.jsdelivr.net/npm/emojionearea@3.4.2/dist/emojionearea.min.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/emojionearea@3.4.2/dist/emojionearea.min.css"
+      rel="stylesheet"
+    />
+       <script
+      type="module"
+      src="http://localhost/undangan_jawa/js/ucapan.js"></script>
    </body>
 
 </html>

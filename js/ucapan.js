@@ -83,7 +83,7 @@ const getDataUcapan = async () => {
                     <div class="data-name">
                     <span>${ucapanItem.nama}</span>
                     <span class="attend-status">
-                        <img src="https://cdn.jsdelivr.net/gh/ihzaa/undangan_jawa@e69bad81cfd3dfa0979042ae45354e0edf52b8c3/wp-content/assets/icon/${ucapanItem.kehadiran == 1 ? '' : 'tidak'}hadir.svg">
+                        <img src="https://cdn.jsdelivr.net/gh/ihzaa/undangan_jawa@6772573efdc7aecc070893b417632c50de757dbd/wp-content/assets/icon/${ucapanItem.kehadiran == 1 ? '' : 'tidak'}hadir.svg">
                     </span>
                     </div>
                     <div class="data-date">${formattedDate}</div>
@@ -179,7 +179,7 @@ const storeUcapan = async (nama, ucapan, kehadiran) => {
                     <div class="data-name">
                     <span>${nama}</span>
                     <span class="attend-status">
-                        <img src="https://cdn.jsdelivr.net/gh/ihzaa/undangan_jawa@e69bad81cfd3dfa0979042ae45354e0edf52b8c3/wp-content/assets/icon/${kehadiran == 1 ? '' : 'tidak'}hadir.svg">
+                        <img src="https://cdn.jsdelivr.net/gh/ihzaa/undangan_jawa@6772573efdc7aecc070893b417632c50de757dbd/wp-content/assets/icon/${kehadiran == 1 ? '' : 'tidak'}hadir.svg">
                     </span>
                     </div>
                     <div class="data-date">${formatDate()}</div>

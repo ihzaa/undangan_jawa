@@ -49,21 +49,33 @@
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.5/css/lightbox.min.css" integrity="sha512-xtV3HfYNbQXS/1R1jP53KbFcU9WXiSA1RFKzl5hRlJgdOJm4OxHCWYpskm6lN0xp0XtKGpAfVShpbvlFH3MDAA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <style>
+      .car {
+        stroke-dasharray: 100;
+        stroke-dashoffset: 100;
+        animation: move 2s linear infinite;
+      }
+      @keyframes move {
+        from { stroke-dashoffset: 100; }
+        to { stroke-dashoffset: 0; }
+      }
+    </style>
 </head>
 
 <body
    class="demo-template-default single single-demo postid-158912 elementor-default elementor-template-canvas elementor-kit-5 elementor-page elementor-page-158912">
    <div class="loader"
       style="position: fixed; top: 0; left: 0; bottom: 0; width: 100%; height: 100%; z-index: 999999999; background: #ffffff; display: flex; align-items: center; justify-content: center; flex-direction: column; transition: opacity .3s ease-in; opacity: 1;overflow: hidden;">
-      <svg class="loaders" x="0px" y="0px" viewBox="0 0 40 40" height="40" width="40"
-         preserveAspectRatio="xMidYMid meet">
-         <path class="track" fill="none" stroke-width="4" pathLength="100"
-            d="M29.760000000000005 18.72 c0 7.28 -3.9200000000000004 13.600000000000001 -9.840000000000002 16.96 c -2.8800000000000003 1.6800000000000002 -6.24 2.64 -9.840000000000002 2.64 c -3.6 0 -6.88 -0.96 -9.76 -2.64 c0 -7.28 3.9200000000000004 -13.52 9.840000000000002 -16.96 c2.8800000000000003 -1.6800000000000002 6.24 -2.64 9.76 -2.64 S26.880000000000003 17.040000000000003 29.760000000000005 18.72 c5.84 3.3600000000000003 9.76 9.68 9.840000000000002 16.96 c -2.8800000000000003 1.6800000000000002 -6.24 2.64 -9.76 2.64 c -3.6 0 -6.88 -0.96 -9.840000000000002 -2.64 c -5.84 -3.3600000000000003 -9.76 -9.68 -9.76 -16.96 c0 -7.28 3.9200000000000004 -13.600000000000001 9.76 -16.96 C25.84 5.120000000000001 29.760000000000005 11.440000000000001 29.760000000000005 18.72z">
-         </path>
-         <path class="car" fill="none" stroke-width="4" pathLength="100"
-            d="M29.760000000000005 18.72 c0 7.28 -3.9200000000000004 13.600000000000001 -9.840000000000002 16.96 c -2.8800000000000003 1.6800000000000002 -6.24 2.64 -9.840000000000002 2.64 c -3.6 0 -6.88 -0.96 -9.76 -2.64 c0 -7.28 3.9200000000000004 -13.52 9.840000000000002 -16.96 c2.8800000000000003 -1.6800000000000002 6.24 -2.64 9.76 -2.64 S26.880000000000003 17.040000000000003 29.760000000000005 18.72 c5.84 3.3600000000000003 9.76 9.68 9.840000000000002 16.96 c -2.8800000000000003 1.6800000000000002 -6.24 2.64 -9.76 2.64 c -3.6 0 -6.88 -0.96 -9.840000000000002 -2.64 c -5.84 -3.3600000000000003 -9.76 -9.68 -9.76 -16.96 c0 -7.28 3.9200000000000004 -13.600000000000001 9.76 -16.96 C25.84 5.120000000000001 29.760000000000005 11.440000000000001 29.760000000000005 18.72z">
-         </path>
-      </svg>
+      <svg class="loaders" x="0px" y="0px" viewBox="0 0 100 50" height="50" width="100"
+     preserveAspectRatio="xMidYMid meet">
+  <path class="track" fill="none" stroke="#ddd" stroke-width="6" pathLength="100"
+        d="M10,25 C10,10 40,10 50,25 C60,40 90,40 90,25 C90,10 60,10 50,25 C40,40 10,40 10,25 Z">
+  </path>
+  <path class="car" fill="none" stroke="#333" stroke-width="6" pathLength="100"
+        d="M10,25 C10,10 40,10 50,25 C60,40 90,40 90,25 C90,10 60,10 50,25 C40,40 10,40 10,25 Z">
+  </path>
+</svg>
+
    </div>
    <div data-elementor-type="wp-post" data-elementor-id="158912" class="elementor elementor-158912"
       data-elementor-post-type="demo">

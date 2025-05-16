@@ -280,9 +280,17 @@
                                                 class="elementor-element elementor-element-2b193d1a imgcover elementor-widget elementor-widget-image"
                                                 data-id="2b193d1a" data-element_type="widget"
                                                 data-widget_type="image.default">
-                                                <div class="elementor-widget-container"> <img
-                                                      src="https://cdn.jsdelivr.net/gh/ihzaa/undangan_jawa@08d5dda8a4b7ef0e94759223f793b9a49fb13d5f/images/ber2-1.jpg" title=""
+                                                <div class="elementor-widget-container flip-img-div"> 
+                                                   <div class="front">
+                                                      <img
+                                                      src="http://undangan_jawa.local:81/images/depan.webp" title=""
                                                       alt="" />
+                                                   </div>
+                                                   <div class="back">
+                                                      <img
+                                                      src="http://undangan_jawa.local:81/images/depan-ai.webp" title=""
+                                                      alt="" />
+                                                   </div>
                                                 </div>
                                              </div>
                                              <div
@@ -556,9 +564,17 @@
                                                    class="elementor-element elementor-element-7d68e253 imgcover elementor-widget elementor-widget-image"
                                                    data-id="7d68e253" data-element_type="widget"
                                                    data-widget_type="image.default">
-                                                   <div class="elementor-widget-container"> <img
-                                                         src="https://cdn.jsdelivr.net/gh/ihzaa/undangan_jawa@08d5dda8a4b7ef0e94759223f793b9a49fb13d5f/images/ayu-1.jpg" title=""
+                                                   <div class="elementor-widget-container flip-img-div">
+                                                      <div class="front">
+                                                         <img
+                                                         src="http://undangan_jawa.local:81/images/ayu.webp" title=""
                                                          alt="" />
+                                                      </div>
+                                                      <div class="back">
+                                                         <img
+                                                         src="http://undangan_jawa.local:81/images/ayu-ai.webp" title=""
+                                                         alt="" />
+                                                      </div>
                                                    </div>
                                                 </div>
                                                 <div
@@ -669,9 +685,17 @@
                                                    class="elementor-element elementor-element-37bfcba1 imgcover elementor-widget elementor-widget-image"
                                                    data-id="37bfcba1" data-element_type="widget"
                                                    data-widget_type="image.default">
-                                                   <div class="elementor-widget-container"> <img
-                                                         src="https://cdn.jsdelivr.net/gh/ihzaa/undangan_jawa@08d5dda8a4b7ef0e94759223f793b9a49fb13d5f/images/ihza-1.jpg" title=""
+                                                   <div class="elementor-widget-container flip-img-div">
+                                                      <div class="front">
+                                                         <img
+                                                         src="http://undangan_jawa.local:81/images/ihza.webp" title=""
                                                          alt="" />
+                                                      </div>
+                                                      <div class="back">
+                                                         <img
+                                                         src="http://undangan_jawa.local:81/images/ihza-ai.webp" title=""
+                                                         alt="" />
+                                                      </div>
                                                    </div>
                                                 </div>
                                                 <div
@@ -1939,9 +1963,18 @@
                                           class="elementor-element elementor-element-3245542d imgcover elementor-widget elementor-widget-image"
                                           data-id="3245542d" data-element_type="widget"
                                           data-widget_type="image.default">
-                                          <div class="elementor-widget-container"> <img
-                                                src="https://cdn.jsdelivr.net/gh/ihzaa/undangan_jawa@08d5dda8a4b7ef0e94759223f793b9a49fb13d5f/images/ber2-2.jpg" title=""
-                                                alt="" /></div>
+                                          <div class="elementor-widget-container flip-img-div">
+                                             <div class="front">
+                                                <img
+                                                src="http://undangan_jawa.local:81/images/closing.jpg" title=""
+                                                alt="" />
+                                             </div>
+                                             <div class="back">
+                                                <img
+                                                src="http://undangan_jawa.local:81/images/closing-ai.webp" title=""
+                                                alt="" />
+                                             </div>
+                                          </div>
                                        </div>
                                        <div
                                           class="elementor-element elementor-element-702e4ac0 e-transform e-transform e-transform elementor-widget elementor-widget-image"
@@ -2540,6 +2573,13 @@
        <script
       type="module"
       src="https://cdn.jsdelivr.net/gh/ihzaa/undangan_jawa@08d5dda8a4b7ef0e94759223f793b9a49fb13d5f/js/ucapan.js"></script>
+      <script src="https://cdn.jsdelivr.net/gh/nnattawat/flip@1.1.2/dist/jquery.flip.min.js"></script>
+      <script>
+         $('.flip-img-div').flip({
+           axis: 'y',
+           trigger: 'click'
+         });
+       </script>
    </body>
 
 </html>

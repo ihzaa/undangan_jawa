@@ -83,7 +83,7 @@ const getDataUcapan = async () => {
                     <div class="data-name">
                     <span>${ucapanItem.nama}</span>
                     <span class="attend-status">
-                        <img src="https://cdn.jsdelivr.net/gh/ihzaa/undangan_jawa@08d5dda8a4b7ef0e94759223f793b9a49fb13d5f/wp-content/assets/icon/${ucapanItem.kehadiran == 1 ? '' : 'tidak'}hadir.svg">
+                        <img src="https://cdn.jsdelivr.net/gh/ihzaa/undangan_jawa@dfabe5b02a9f94539a25dbb63d0f7e8d1794ef4d/wp-content/assets/icon/${ucapanItem.kehadiran == 1 ? '' : 'tidak'}hadir.svg">
                     </span>
                     </div>
                     <div class="data-date">${formattedDate}</div>
@@ -179,7 +179,7 @@ const storeUcapan = async (nama, ucapan, kehadiran) => {
                     <div class="data-name">
                     <span>${nama}</span>
                     <span class="attend-status">
-                        <img src="https://cdn.jsdelivr.net/gh/ihzaa/undangan_jawa@08d5dda8a4b7ef0e94759223f793b9a49fb13d5f/wp-content/assets/icon/${kehadiran == 1 ? '' : 'tidak'}hadir.svg">
+                        <img src="https://cdn.jsdelivr.net/gh/ihzaa/undangan_jawa@dfabe5b02a9f94539a25dbb63d0f7e8d1794ef4d/wp-content/assets/icon/${kehadiran == 1 ? '' : 'tidak'}hadir.svg">
                     </span>
                     </div>
                     <div class="data-date">${formatDate()}</div>

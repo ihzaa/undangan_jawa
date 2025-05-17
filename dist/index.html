@@ -1556,9 +1556,11 @@
                                              <img class="" src="https://cdn.jsdelivr.net/gh/ihzaa/undangan_jawa@b28fd7b64f557a16bc09cf8b6f28b7f500ab6a09/images/galeri-11.webp">
                                           </a>
                                        </div>
-                                       <div id="lastGalleryItem" style="margin-top: 10px;">
-                                          <a class="g-item azoom" href="https://cdn.jsdelivr.net/gh/ihzaa/undangan_jawa@b28fd7b64f557a16bc09cf8b6f28b7f500ab6a09/images/galeri.gif" data-lightbox="Foto Ayu & Ihza">
-                                            <img src="https://cdn.jsdelivr.net/gh/ihzaa/undangan_jawa@b28fd7b64f557a16bc09cf8b6f28b7f500ab6a09/images/galeri.gif" style="width: 100%; height: auto;">
+                                       <div id="lastGalleryItem" style="margin-right: 5px;margin-left: 5px;">
+                                          <a class="g-item azoom"
+                                          href="https://cdn.jsdelivr.net/gh/ihzaa/undangan_jawa@b28fd7b64f557a16bc09cf8b6f28b7f500ab6a09/images/galeri.gif" 
+                                          data-lightbox="Foto Ayu & Ihza" style="display: block !important; height: 100% !important;">
+                                            <img src="https://cdn.jsdelivr.net/gh/ihzaa/undangan_jawa@b28fd7b64f557a16bc09cf8b6f28b7f500ab6a09/images/galeri.gif" style="border-radius: 15px;">
                                           </a>
                                         </div>
                                     </div>
@@ -2614,6 +2616,14 @@
            axis: 'y',
            trigger: 'click'
          });
+         // let lastImage = $('#forGallery a').last().detach();
+         // $('#lastGalleryItem').append(lastImage);
+
+         // // WAJIB: re-inisialisasi lightbox
+         // if (window.lightbox) {
+         // lightbox.init();
+         // }
+
        </script>
    </body>
 

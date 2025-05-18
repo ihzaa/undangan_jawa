@@ -2613,20 +2613,14 @@
        <script
       type="module"
       src="https://cdn.jsdelivr.net/gh/ihzaa/undangan_jawa@dfabe5b02a9f94539a25dbb63d0f7e8d1794ef4d/js/ucapan.js"></script>
-      <script src="https://cdn.jsdelivr.net/gh/nnattawat/flip@1.1.2/dist/jquery.flip.min.js"></script>
+      <script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
       <script>
-         $('.flip-img-div').flip({
-           axis: 'y',
-           trigger: 'click'
+         $(document).ready(function() {
+            $('.flip-img-div').flip({
+            axis: 'y',
+            trigger: 'click'
+            });
          });
-         // let lastImage = $('#forGallery a').last().detach();
-         // $('#lastGalleryItem').append(lastImage);
-
-         // // WAJIB: re-inisialisasi lightbox
-         // if (window.lightbox) {
-         // lightbox.init();
-         // }
-
        </script>
    </body>
 

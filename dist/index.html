@@ -49,6 +49,7 @@
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.5/css/lightbox.min.css" integrity="sha512-xtV3HfYNbQXS/1R1jP53KbFcU9WXiSA1RFKzl5hRlJgdOJm4OxHCWYpskm6lN0xp0XtKGpAfVShpbvlFH3MDAA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <link rel="stylesheet" href="https://unpkg.com/microtip/microtip.css" />
    <style>
       .car {
         stroke-dasharray: 100;
@@ -61,6 +62,11 @@
       }
       .flip-img-div{
          cursor: pointer;
+      }
+      .tooltip-active::after,
+      .tooltip-active::before {
+         opacity: 1 !important;
+         visibility: visible !important;
       }
     </style>
 </head>
@@ -283,7 +289,10 @@
                                                 class="elementor-element elementor-element-2b193d1a imgcover elementor-widget elementor-widget-image"
                                                 data-id="2b193d1a" data-element_type="widget"
                                                 data-widget_type="image.default">
-                                                <div class="elementor-widget-container flip-img-div"> 
+                                                <div class="elementor-widget-container flip-img-div" id="gambar_paling_atas"
+                                                aria-label="Coba klik" 
+                                                data-microtip-position="top" 
+                                                role="tooltip"> 
                                                    <div class="front">
                                                       <img
                                                       src="https://cdn.jsdelivr.net/gh/ihzaa/undangan_jawa@aae758c8d662fc7588060f9e66fa6f2a53ef78f6/images/depan.webp" title=""
@@ -2620,6 +2629,35 @@
             axis: 'y',
             trigger: 'click'
             });
+         });
+       </script>
+
+       <script>
+         const button = document.getElementById('gambar_paling_atas');
+         let tooltipInterval;
+         let stopLooping = false;
+     
+         const startLoopingTooltip = () => {
+           tooltipInterval = setInterval(() => {
+             // Show tooltip (by adding class)
+             button.classList.add('tooltip-active');
+     
+             // Hide after 3 seconds
+             setTimeout(() => {
+               button.classList.remove('tooltip-active');
+             }, 1000);
+           }, 2000); // every 8 seconds (3 show + 5 hide)
+         };
+     
+         // Start looping tooltip
+         startLoopingTooltip();
+     
+         // Stop on click
+         button.addEventListener('click', () => {
+           clearInterval(tooltipInterval);
+           button.classList.remove('tooltip-active');
+           button.removeAttribute('role');
+           button.removeAttribute('aria-label');
          });
        </script>
    </body>

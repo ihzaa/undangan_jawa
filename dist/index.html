@@ -2632,34 +2632,48 @@
          });
        </script>
 
-       <script>
+      <script>
          const button = document.getElementById('gambar_paling_atas');
          let tooltipInterval;
-         let stopLooping = false;
-     
+      
+         // Array teks untuk tooltip
+         const tooltipTexts = [
+         'Click me',
+         'Click here',
+         'Klik disini',
+         'Klik klik'
+         ];
+         let currentIndex = 0;
+      
          const startLoopingTooltip = () => {
-           tooltipInterval = setInterval(() => {
-             // Show tooltip (by adding class)
-             button.classList.add('tooltip-active');
-     
-             // Hide after 3 seconds
-             setTimeout(() => {
+         tooltipInterval = setInterval(() => {
+            // Ganti teks tooltip
+            button.setAttribute('aria-label', tooltipTexts[currentIndex]);
+            button.setAttribute('role', 'tooltip'); // pastikan tetap tooltip
+            currentIndex = (currentIndex + 1) % tooltipTexts.length;
+      
+            // Show tooltip (by adding class)
+            button.classList.add('tooltip-active');
+      
+            // Hide after 1 second
+            setTimeout(() => {
                button.classList.remove('tooltip-active');
-             }, 1000);
-           }, 2000); // every 8 seconds (3 show + 5 hide)
+            }, 1000);
+         }, 2000); // total cycle: 1s show + 1s hide
          };
-     
+      
          // Start looping tooltip
          startLoopingTooltip();
-     
+      
          // Stop on click
          button.addEventListener('click', () => {
-           clearInterval(tooltipInterval);
-           button.classList.remove('tooltip-active');
-           button.removeAttribute('role');
-           button.removeAttribute('aria-label');
+         clearInterval(tooltipInterval);
+         button.classList.remove('tooltip-active');
+         button.removeAttribute('role');
+         button.removeAttribute('aria-label');
          });
-       </script>
+      </script>
+ 
    </body>
 
 </html>
